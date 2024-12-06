@@ -1,6 +1,7 @@
 import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
+import chalk from 'crypto-chalk';
 
 const app = express();
 app.use(bodyParser.urlencoded({extended:true}));
@@ -24,4 +25,4 @@ app.post("/pinataData", async(req, res, next) => {
 });
 
 
-app.listen(8000, console.log("Server started"));
+app.listen(8000, console.log(chalk.blue('Server started!')));
